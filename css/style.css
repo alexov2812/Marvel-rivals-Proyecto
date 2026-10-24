@@ -1,0 +1,35 @@
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+}
+
+hero.marvel {
+    background-color: black;
+}
+
+.historia-box {
+    background-color: #16366a;
+}
+
+.card {
+    background-color: #16366a;
+    height: 100%;
+}
+
+.card-image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.modal-card-head,
+.modal-card-body {
+    background-color: #16366a;
+}
+
+.modal-card-title {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+}

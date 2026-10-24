@@ -1,0 +1,146 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marvel Rivals - Personajes</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+    <title>Imagen de Fondo</title>
+    <style>
+        body {
+            
+            background-image: url("fondodepantalla.jpg"); 
+            
+            
+            background-repeat: no-repeat; 
+            
+           
+            background-size: cover; 
+            
+            
+            background-position: center; 
+            
+           
+            background-attachment: fixed; 
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#inicio">MARVEL RIVALS</a>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#agregar">Agregar</a>
+                <a class="navbar-item" href="#personajes">Personajes</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+<section id="inicio" class="hero hero-marvel">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+
+            <img class="titulo-xmen" src="logotrans.jpg" alt="marvel imagen titulo">
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+    <section id="agregar" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-white has-text-centered" id="titulo-formulario">AGREGAR PERSONAJE</h2>
+
+            <div class="box historia-box">
+                <div class="columns is-multiline">
+                    <div class="column is-half">
+                        <label class="label has-text-white">Nombre</label>
+                        <input class="input" type="text" id="nombre">
+                    </div>
+                    <div class="column is-half">
+                        <label class="label has-text-white">Rol</label>
+                        <div class="select is-fullwidth">
+                            <select id="rol">
+                                <option value="">Selecciona un rol</option>
+                                <option value="Daño">Daño</option>
+                                <option value="Tanque">Tanque</option>
+                                <option value="Apoyo">Apoyo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <label class="label has-text-white">Origen</label>
+                        <input class="input" type="text" id="origen">
+                    </div>
+                    <div class="column is-half">
+                        <label class="label has-text-white">URL de imagen (opcional)</label>
+                        <input class="input" type="text" id="imagen">
+                    </div>
+                    <div class="column is-full">
+                        <label class="label has-text-white">Descripción</label>
+                        <textarea class="textarea" id="descripcion" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <p id="mensaje" class="mb-3"></p>
+                <div class="buttons">
+                    <button class="button is-info" id="btn-guardar" onclick="guardarFormulario()">Agregar</button>
+                    <button class="button is-light is-hidden" id="btn-cancelar" onclick="cancelarEdicion()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="personajes" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-white has-text-centered">PERSONAJES</h2>
+
+            <div class="box historia-box">
+                <input class="input" type="text" id="busqueda" placeholder="Buscar por nombre o rol...">
+                <p id="contador" class="has-text-grey-lighter mt-3"></p>
+            </div>
+
+            <div id="grid" class="columns is-multiline"></div>
+        </div>
+    </section>
+
+    <!-- Ventana "Ver más" -->
+    <div class="modal" id="modal">
+        <div class="modal-background" onclick="cerrarModal()"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modal-nombre"></p>
+                <button class="delete" aria-label="close" onclick="cerrarModal()"></button>
+            </header>
+            <section class="modal-card-body">
+                <p class="has-text-white"><strong>Origen:</strong> <span id="modal-origen"></span></p>
+                <p class="has-text-white mt-4"><strong>Descripción:</strong></p>
+                <p class="has-text-grey-lighter" id="modal-descripcion"></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
